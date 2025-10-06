@@ -1,6 +1,7 @@
 // frontend/src/Components/AdminPage.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { BASE_API_URL } from '../../../frontend/src/config';
 import './AdminPage.css';
 
 const AdminPage = () => {
@@ -23,7 +24,7 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/orders/all');
+  const res = await axios.get(`${BASE_API_URL}/api/orders/all`);
         if (res.data.success) {
           setOrders(res.data.orders);
         }
@@ -57,7 +58,7 @@ const AdminPage = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/orders/${currentOrder.orderId}`,
+        `${BASE_API_URL}/api/orders/${currentOrder.orderId}`,
         { orderStatus: status }
       );
 
