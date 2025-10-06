@@ -1,7 +1,7 @@
 // frontend/src/Components/AdminPage.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { BASE_API_URL } from '../../../frontend/src/config';
+import { BASE_API_URL } from "../config";
 import './AdminPage.css';
 
 const AdminPage = () => {
