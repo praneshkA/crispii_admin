@@ -1,0 +1,491 @@
+/* ================= GLOBAL LAYOUT ================= */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+  overflow: hidden;
+}
+
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: #111827;
+  color: white;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-logo {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.sidebar-btn {
+  display: block;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: 10px;
+  color: white;
+  transition: 0.2s ease;
+  font-weight: 600;
+}
+
+.sidebar-btn:hover {
+  background: #1f2937;
+}
+
+.sidebar-btn.active {
+  background: #2563eb;
+}
+
+
+
+/* ================= MAIN AREA ================= */
+
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 75px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+
+/* ================= LOGOUT BUTTON ================= */
+
+.logout-btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+
+
+/* ================= CONTENT ================= */
+
+.dashboard-content {
+  padding: 28px;
+}
+
+.dashboard-title {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+
+
+/* ================= ORDERS GRID ================= */
+
+.orders-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+/* ================= ORDER WRAPPER ================= */
+
+.order-wrapper {
+  background: transparent;
+}
+
+
+
+/* ================= ORDER CARD ================= */
+
+.order-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  cursor: pointer;
+
+  border: 2px solid transparent;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.08);
+}
+
+.order-card.active {
+  border-color: #2563eb;
+}
+
+.order-card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #111827;
+  word-break: break-word;
+}
+
+.order-card p {
+  margin-bottom: 8px;
+  color: #4b5563;
+  font-size: 15px;
+}
+
+
+
+/* ================= PAYMENT BADGES ================= */
+
+.payment-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.payment-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.payment-badge.successful {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.payment-badge.failed {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+
+
+/* ================= ORDER DETAILS ================= */
+
+.order-details {
+  margin-top: 14px;
+
+  background: white;
+
+  border-radius: 14px;
+
+  padding: 28px;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.05);
+
+  border: 1px solid #e5e7eb;
+}
+
+.order-details h2 {
+  margin-bottom: 20px;
+  color: #111827;
+  font-size: 24px;
+}
+
+.order-details h3 {
+  margin-bottom: 14px;
+  color: #111827;
+  font-size: 18px;
+}
+
+.order-details p {
+  margin-bottom: 12px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+
+
+/* ================= PAYMENT IMAGE ================= */
+
+.payment-section {
+  margin-top: 30px;
+}
+
+.payment-image-container {
+  margin-top: 14px;
+}
+
+.payment-proof-image {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  object-fit: cover;
+}
+
+.view-full-image {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.view-full-image:hover {
+  text-decoration: underline;
+}
+
+
+
+/* ================= PAYMENT CONFIRMATION ================= */
+
+.payment-confirmation-section {
+  margin-top: 30px;
+
+  background: #fff7ed;
+
+  border: 1px solid #fdba74;
+
+  border-radius: 12px;
+
+  padding: 20px;
+}
+
+.confirm-btn {
+  margin-top: 12px;
+
+  border: none;
+
+  background: #16a34a;
+
+  color: white;
+
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.confirm-btn:hover {
+  background: #15803d;
+}
+
+.confirm-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+
+/* ================= UPDATE SECTION ================= */
+
+.update-section {
+  margin-top: 32px;
+
+  border-top: 1px solid #e5e7eb;
+
+  padding-top: 24px;
+}
+
+.update-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: end;
+}
+
+.update-controls div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.update-controls label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.update-controls select {
+  min-width: 220px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid #d1d5db;
+
+  background: white;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.update-controls select:focus {
+  border-color: #2563eb;
+}
+
+
+
+/* ================= UPDATE BUTTON ================= */
+
+.update-btn {
+  border: none;
+
+  background: #2563eb;
+
+  color: white;
+
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.update-btn:hover {
+  background: #1d4ed8;
+}
+
+.update-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+
+/* ================= ERROR ================= */
+
+.error-text {
+  margin-top: 20px;
+  color: #dc2626;
+  font-weight: 600;
+  white-space: pre-wrap;
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 220px;
+    min-width: 220px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+  }
+
+  .sidebar-logo {
+    display: none;
+  }
+
+  .dashboard-content {
+    padding: 18px;
+  }
+
+  .navbar {
+    padding: 0 18px;
+  }
+
+  .navbar-title {
+    font-size: 20px;
+  }
+
+  .order-details {
+    padding: 20px;
+  }
+
+  .update-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .update-controls select {
+    min-width: 100%;
+  }
+
+  .update-btn,
+  .confirm-btn {
+    width: 100%;
+  }
+
+  .payment-proof-image {
+    max-width: 100%;
+  }
+
+}
