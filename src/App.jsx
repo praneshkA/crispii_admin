@@ -10,7 +10,7 @@ import { useState } from 'react';
 import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';
 
-import AdminLogin from './components/AdminLogin';
+import AdminLogin from './components/AdminLogin.jsx';
 
 function App() {
 
