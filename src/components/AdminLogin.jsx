@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/AdminLogin.css';
-const API_URL = import.meta.env.VITE_BACKEND_URL || 'http://https://crispii.onrender.com/api/admin';
+const API_URL = import.meta.env.VITE_BACKEND_URL || 'https://crispii.onrender.com/api/admin';
 
 const AdminLogin = ({ onLogin }) => {
   const [username, setUsername] = useState('');
